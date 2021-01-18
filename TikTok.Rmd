@@ -1,7 +1,7 @@
 ---
 title: "TikTok in R Files: An example of the tiktokrmd package"
 author: "Laura Ellis"
-date: "1/16/2021"
+date: '`r format(Sys.time(), "%d %B, %Y")`'
 output: html_document
 ---
 
@@ -16,7 +16,7 @@ Installing the package is straight forward through the `install_github()` functi
 
 1) You can just update the remotes package as [Garrick](https://twitter.com/grrrck) [pointed out](https://twitter.com/grrrck/status/1350504524901920773?s=20).
 
-2) You can specify the branch as @main as I [pointed out in a tweet.](https://twitter.com/LittleMissData/status/1350473247788310536)
+2) You can specify the branch as @main as I [mentioned in a tweet.](https://twitter.com/LittleMissData/status/1350473247788310536)
 
 
 ```{r }
@@ -27,7 +27,7 @@ Installing the package is straight forward through the `install_github()` functi
 #remotes::install_github("gadenbuie/tiktokrmd")
 
 #2) Or if you have the remotes package installed and don't want to or can't re-install, you can just specify the branch
-remotes::install_github("gadenbuie/tiktokrmd@main")
+#remotes::install_github("gadenbuie/tiktokrmd@main")
 library(tiktokrmd)
 ```
 
@@ -44,14 +44,14 @@ tt <- tiktok_embed(tt_url)
 ```
 
 
-#### Display 
+#### Display the video
 
 ```{r}
 tt
 
 ```
 
-#### Display with plain markdown
+#### Display the plain markdown
 
 ```{r}
 
@@ -60,20 +60,16 @@ tiktok_md(tt)
 ```
 
 
-#### Display in html with player
-
-```{r}
-tiktok_html(tt, include_player = FALSE)
-
-```
-
-
 ## Knit to HTML and host online
 
-In the repo, Garrick [points out](https://github.com/gadenbuie/tiktokrmd#%EF%B8%8F-previewing-locally-%EF%B8%8F) that the html file needs to be hosted somewhere to fully display the video.  Luckily GitHub pages has us covered.  [Just follow the steps in my previous blog here](https://www.littlemissdata.com/blog/pretty-r-tables-in-github) to host your html, .Rmd output on GitHub pages. 
+In the repo, Garrick [points out](https://github.com/gadenbuie/tiktokrmd#%EF%B8%8F-previewing-locally-%EF%B8%8F) that the html file needs to be hosted somewhere to fully display the video.  Luckily GitHub pages has us covered.  
+
+[Just follow the steps in my previous blog here](https://www.littlemissdata.com/blog/pretty-r-tables-in-github) to host your html, .Rmd output on GitHub pages. 
 
 
 ## Thank You
 
 Thank you for following along and good luck with trying out the package!
 
+
+<3 Littlemissdata
