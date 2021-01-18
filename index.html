@@ -419,13 +419,13 @@ summary {
 
 <div id="tiktok-in-r" class="section level1">
 <h1>TikTok in R?!?!</h1>
-<p>:scream: Late last week, <a href="https://twitter.com/grrrck">Garrick Aden-Buie</a> <a href="https://twitter.com/grrrck/status/1349729420508946435">announced a new package</a> that allow us to embed TikTok videos into R Markdown files. The package is called <code>tiktokrmd</code> and can be found <a href="https://github.com/gadenbuie/tiktokrmd">here</a>. It should also be noted that Garrick, has a number of other fun samples and packages on <a href="https://www.garrickadenbuie.com/project/">his website</a>, that I highly encourage y’all to check out.</p>
+<p>Late last week, <a href="https://twitter.com/grrrck">Garrick Aden-Buie</a> <a href="https://twitter.com/grrrck/status/1349729420508946435">announced a new package</a> that allow us to embed TikTok videos into R Markdown files. The package is called <code>tiktokrmd</code> and can be found <a href="https://github.com/gadenbuie/tiktokrmd">here</a>. It should also be noted that Garrick, has a number of other fun samples and packages on <a href="https://www.garrickadenbuie.com/project/">his website</a>, that I highly encourage y’all to check out.</p>
 <div id="install-the-package" class="section level2">
 <h2>Install the Package</h2>
 <p>Installing the package is straight forward through the <code>install_github()</code> function in the <code>remotes</code> package. This happened to be the first new package I downloaded from GitHub on a repo that was created since the default branch was named <code>main</code>, so I encountered the need to employ one of two techniques below.</p>
 <ol style="list-style-type: decimal">
 <li><p>You can just update the remotes package as <a href="https://twitter.com/grrrck">Garrick</a> <a href="https://twitter.com/grrrck/status/1350504524901920773?s=20">pointed out</a>.</p></li>
-<li><p>You can specify the branhc as <span class="citation">@main</span> as I <a href="https://twitter.com/LittleMissData/status/1350473247788310536">pointed out in a tweet.</a></p></li>
+<li><p>You can specify the branch as <span class="citation">@main</span> as I <a href="https://twitter.com/LittleMissData/status/1350473247788310536">pointed out in a tweet.</a></p></li>
 </ol>
 <pre class="r"><code>#1) Update remotes to find the default branch
 #install.packages(&quot;remotes&quot;)
@@ -441,7 +441,7 @@ remotes::install_github(&quot;gadenbuie/tiktokrmd@main&quot;)</code></pre>
 <div id="embed-your-favorite-tiktok-video" class="section level2">
 <h2>Embed your favorite TikTok video</h2>
 <p>This is probably the easiest tutorial I’ve written, just because of how simple Garrick has made his package. As per the instructions on his GitHub repo, simply set a variable to the TikTok video URL, pass it through the <code>tiktok_embed</code> function, and then pass that through the <code>tiktok_html</code> function.</p>
-<p>For my example, I wanted to include one of <a href="https://www.tiktok.com/@chelseaparlettpelleriti?lang=en">Chelsea Parlett’s videos</a>, as they are straight :fire: for data nerds :nerd_face: .</p>
+<p>For my example, I am including my favorite data TikTok by <a href="https://www.tiktok.com/@chelseaparlettpelleriti?lang=en">Chelsea Parlett</a>. I highly encourage y’all to check out her videos!</p>
 <pre class="r"><code>tt_url &lt;- &quot;https://www.tiktok.com/@chelseaparlettpelleriti/video/6811647290709757189&quot;
 tt &lt;- tiktok_embed(tt_url)</code></pre>
 <div id="display" class="section level4">
@@ -460,17 +460,17 @@ tt &lt;- tiktok_embed(tt_url)</code></pre>
 </div>
 <div id="display-in-html-with-player" class="section level4">
 <h4>Display in html with player</h4>
-<pre class="r"><code>tiktok_html(tt, include_player = TRUE)</code></pre>
+<pre class="r"><code>tiktok_html(tt, include_player = FALSE)</code></pre>
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@chelseaparlettpelleriti/video/6811647290709757189" data-video-id="6811647290709757189" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@chelseaparlettpelleriti" href="https://www.tiktok.com/@chelseaparlettpelleriti">@chelseaparlettpelleriti</a> <p>Always check your assumptions 📈<a title="statistics" target="_blank" href="https://www.tiktok.com/tag/statistics">#statistics</a> <a title="math" target="_blank" href="https://www.tiktok.com/tag/math">#math</a> <a title="linearregression" target="_blank" href="https://www.tiktok.com/tag/linearregression">#linearregression</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a></p> <a target="_blank" title="♬ is it me, Jesus? - Mackenzie Lee" href="https://www.tiktok.com/music/is-it-me-Jesus-6732518990188415749">♬ is it me, Jesus? - Mackenzie Lee</a> </section> </blockquote> 
-<!--SHINY.SINGLETON[e123f97525dee37cc53ba5b9f17fd3caf1b72842]-->
-<script async data-external="1" src="https://www.tiktok.com/embed.js"></script>
-<style>blockquote.tiktok-embed {border:unset;padding:unset;}</style>
-<!--/SHINY.SINGLETON[e123f97525dee37cc53ba5b9f17fd3caf1b72842]-->
 </div>
 </div>
 <div id="knit-to-html-and-host-online" class="section level2">
 <h2>Knit to HTML and host online</h2>
 <p>In the repo, Garrick <a href="https://github.com/gadenbuie/tiktokrmd#%EF%B8%8F-previewing-locally-%EF%B8%8F">points out</a> that the html file needs to be hosted somewhere to fully display the video. Luckily GitHub pages has us covered. <a href="https://www.littlemissdata.com/blog/pretty-r-tables-in-github">Just follow the steps in my previous blog here</a> to host your html, .Rmd output on GitHub pages.</p>
+</div>
+<div id="thank-you" class="section level2">
+<h2>Thank You</h2>
+<p>Thank you for following along and good luck with trying out the package!</p>
 </div>
 </div>
 

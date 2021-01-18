@@ -7,7 +7,7 @@ output: html_document
 
 # TikTok in R?!?!
 
-:scream: Late last week, [Garrick Aden-Buie](https://twitter.com/grrrck) [announced a new package](https://twitter.com/grrrck/status/1349729420508946435) that allow us to embed TikTok videos into R Markdown files.  The package is called `tiktokrmd` and can be found [here](https://github.com/gadenbuie/tiktokrmd). It should also be noted that Garrick, has a number of other fun samples and packages on [his website](https://www.garrickadenbuie.com/project/), that I highly encourage y'all to check out. 
+Late last week, [Garrick Aden-Buie](https://twitter.com/grrrck) [announced a new package](https://twitter.com/grrrck/status/1349729420508946435) that allow us to embed TikTok videos into R Markdown files.  The package is called `tiktokrmd` and can be found [here](https://github.com/gadenbuie/tiktokrmd). It should also be noted that Garrick, has a number of other fun samples and packages on [his website](https://www.garrickadenbuie.com/project/), that I highly encourage y'all to check out. 
 
 
 ## Install the Package
@@ -16,7 +16,7 @@ Installing the package is straight forward through the `install_github()` functi
 
 1) You can just update the remotes package as [Garrick](https://twitter.com/grrrck) [pointed out](https://twitter.com/grrrck/status/1350504524901920773?s=20).
 
-2) You can specify the branhc as @main as I [pointed out in a tweet.](https://twitter.com/LittleMissData/status/1350473247788310536)
+2) You can specify the branch as @main as I [pointed out in a tweet.](https://twitter.com/LittleMissData/status/1350473247788310536)
 
 
 ```{r }
@@ -36,7 +36,7 @@ library(tiktokrmd)
 
 This is probably the easiest tutorial I've written, just because of how simple Garrick has made his package.  As per the instructions on his GitHub repo, simply set a variable to the TikTok video URL, pass it through the `tiktok_embed` function, and then pass that through the `tiktok_html` function.
 
-For my example, I wanted to include one of [Chelsea Parlett's videos](https://www.tiktok.com/@chelseaparlettpelleriti?lang=en), as they are straight :fire: for data nerds :nerd_face: .
+For my example, I am including my favorite data TikTok by [Chelsea Parlett](https://www.tiktok.com/@chelseaparlettpelleriti?lang=en).  I highly encourage y'all to check out her videos!
 
 ```{r}
 tt_url <- "https://www.tiktok.com/@chelseaparlettpelleriti/video/6811647290709757189"
@@ -63,7 +63,7 @@ tiktok_md(tt)
 #### Display in html with player
 
 ```{r}
-tiktok_html(tt, include_player = TRUE)
+tiktok_html(tt, include_player = FALSE)
 
 ```
 
@@ -72,4 +72,8 @@ tiktok_html(tt, include_player = TRUE)
 
 In the repo, Garrick [points out](https://github.com/gadenbuie/tiktokrmd#%EF%B8%8F-previewing-locally-%EF%B8%8F) that the html file needs to be hosted somewhere to fully display the video.  Luckily GitHub pages has us covered.  [Just follow the steps in my previous blog here](https://www.littlemissdata.com/blog/pretty-r-tables-in-github) to host your html, .Rmd output on GitHub pages. 
 
+
+## Thank You
+
+Thank you for following along and good luck with trying out the package!
 
