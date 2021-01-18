@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Presentation Ninja</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Laura Ellis" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Presentation Ninja
+## TikTok
+### Laura Ellis
+### RStudio, PBC
+### 2016/12/12 (updated: 2021-01-16)
+
+---
+
+
+
+
+
+
+```r
+remotes::install_github("yihui/xaringan")
+```
+
+```r
+remotes::install_github("gadenbuie/tiktokrmd@main")
+```
+
+```
+## Skipping install of 'tiktokrmd' from a github remote, the SHA1 (1e585eb7) has not changed since last install.
+##   Use `force = TRUE` to force installation
+```
+
+```r
+library(tiktokrmd)
+
+tt_url &lt;- "https://www.tiktok.com/@aquickspoonful/video/6890681375431691526"
+tt &lt;- tiktok_embed(tt_url)
+
+## # in R Markdown, just print the object to embed it
+## tt
+
+# Or write a plain markdown version
+tiktok_md(tt)
+```
+
+```
+## [1] "![[#cake #cakes #dontmixit #cakelover #cakelovers #dumpcake #food #tiktokfood #foodtiktok #easyrecipe #easyrecipes #peach #peaches #cinnamon #fyp](https://www.tiktok.com/@aquickspoonful/video/6890681375431691526) by [Sophia Wasu](https://www.tiktok.com/@aquickspoonful)](https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/00189a8b703343bd817a3ccaec240f71?x-expires=1610834400&amp;x-signature=RTVv1ylhUKUVu%2Fr23MorqbzMtwI%3D)"
+```
+
+```r
+#&gt; [1] "![[#cake #cakes #dontmixit #cakelover #cakelovers #dumpcake #food #tiktokfood #foodtiktok #easyrecipe #easyrecipes #peach #peaches #cinnamon #fyp](https://www.tiktok.com/@aquickspoonful/video/6890681375431691526) by [Sophia Wasu](https://www.tiktok.com/@aquickspoonful)](https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/00189a8b703343bd817a3ccaec240f71?x-expires=1610654400&amp;x-signature=ExJZaEMAgxhyXydfgsqgZqU%2B8y8%3D)"
+
+# Or as HTML without the full TikTok embedded player shenanigans
+tiktok_html(tt, include_player = TRUE)
+```
+
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@aquickspoonful/video/6890681375431691526" data-video-id="6890681375431691526" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@aquickspoonful" href="https://www.tiktok.com/@aquickspoonful">@aquickspoonful</a> <p><a title="cake" target="_blank" href="https://www.tiktok.com/tag/cake">#cake</a> <a title="cakes" target="_blank" href="https://www.tiktok.com/tag/cakes">#cakes</a> <a title="dontmixit" target="_blank" href="https://www.tiktok.com/tag/dontmixit">#dontmixit</a> <a title="cakelover" target="_blank" href="https://www.tiktok.com/tag/cakelover">#cakelover</a> <a title="cakelovers" target="_blank" href="https://www.tiktok.com/tag/cakelovers">#cakelovers</a> <a title="dumpcake" target="_blank" href="https://www.tiktok.com/tag/dumpcake">#dumpcake</a> <a title="food" target="_blank" href="https://www.tiktok.com/tag/food">#food</a> <a title="tiktokfood" target="_blank" href="https://www.tiktok.com/tag/tiktokfood">#tiktokfood</a> <a title="foodtiktok" target="_blank" href="https://www.tiktok.com/tag/foodtiktok">#foodtiktok</a> <a title="easyrecipe" target="_blank" href="https://www.tiktok.com/tag/easyrecipe">#easyrecipe</a> <a title="easyrecipes" target="_blank" href="https://www.tiktok.com/tag/easyrecipes">#easyrecipes</a> <a title="peach" target="_blank" href="https://www.tiktok.com/tag/peach">#peach</a> <a title="peaches" target="_blank" href="https://www.tiktok.com/tag/peaches">#peaches</a> <a title="cinnamon" target="_blank" href="https://www.tiktok.com/tag/cinnamon">#cinnamon</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a></p> <a target="_blank" title="♬ original sound - Sophia Wasu" href="https://www.tiktok.com/music/original-sound-6890681399725099782">♬ original sound - Sophia Wasu</a> </section> </blockquote> 
+<!--SHINY.SINGLETON[e123f97525dee37cc53ba5b9f17fd3caf1b72842]-->
+<script async data-external="1" src="https://www.tiktok.com/embed.js"></script>
+<style>blockquote.tiktok-embed {border:unset;padding:unset;}</style>
+<!--/SHINY.SINGLETON[e123f97525dee37cc53ba5b9f17fd3caf1b72842]-->
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+---
+title: "Presentation Ninja"
+subtitle: "TikTok"
+author: "Laura Ellis"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+```{r eval=FALSE, tidy=FALSE}
+remotes::install_github("yihui/xaringan")
+```
+```{r}
+remotes::install_github("gadenbuie/tiktokrmd@main")
+
+
+```
+
