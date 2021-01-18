@@ -5,7 +5,7 @@
 
 # Display Page
  
- Because this tutorial requires html, the tutrial is served up with GitHub pages.  Pls check out the tutorial [here](https://lgellis.github.io/TikTokDisplay/).
+ Because this tutorial requires html, the tutorial is served up with GitHub pages.  Pls check it out [here](https://lgellis.github.io/TikTokDisplay/).
  
  
 # Code
